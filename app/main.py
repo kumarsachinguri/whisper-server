@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 app = FastAPI()
 
 # Load model once at startup
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 
 UPLOAD_DIR = "temp"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
