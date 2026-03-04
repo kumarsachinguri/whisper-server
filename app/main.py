@@ -30,7 +30,7 @@ async def transcribe_audio(file: UploadFile = File(...)):
             buffer.write(await file.read())
 
         # Transcribe
-        result = model.transcribe(file_path)
+        result = model.transcribe(file_path, language="en", fp16=False)
 
         # Cleanup
         os.remove(file_path)
